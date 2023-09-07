@@ -19,7 +19,19 @@ using namespace std;
  * encuentran en el rango.
  */
 
-//clase para guardar los datos
+/**
+ * Implementación de cada dato de la base de datos.
+ * 
+ * Atributos:
+ * - tiempogeneral: string con el tiempo general
+ * - ip: string con el IP
+ * - message: string con el mensaje
+ * - peso: long long con el peso del IP
+ * 
+ * Métodos:
+ * - Datos: constructor de la clase
+ * 
+ */
 class Datos {
 public:
   string tiempogeneral;
@@ -27,6 +39,21 @@ public:
   string message;
   long long peso;
 
+  /**
+   * Descripción: Constructor de la clase Datos.
+   * Complejidad en el tiempo: O(1)
+   * Complejidad en el espacio: O(1)
+   * 
+   * Este constructor toma los atributos de la clase y los inicializa. Cada
+   * parámetro es una columna de la base de datos (excepto peso) separada por |.
+   * El peso se calcula con la función ipConvertido porque es el valor numérrico
+   * del IP. 
+   * 
+   * @param tiempogeneral: string con la fecha
+   * @param ip: string con el IP
+   * @param message: string con el mensaje
+   * @param peso: long long con el peso del IP
+   */
   Datos(string tiempogeneral, string ip, string message, long long peso) {
     this->tiempogeneral = tiempogeneral;
     this->ip = ip;
